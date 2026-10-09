@@ -1,15 +1,27 @@
 
 export class Artista {
 
-    nome: string = "";
-    genero: string = "";
-    album: string = "";
+    constructor(
+        private _nome: string,
+        private _genero: string,
+        private _album: string
+    ) { }
 
 
-    constructor(nome: string, genero: string, album: string) {
+    // getters & setters
 
-        this.nome = nome
-        this.genero = genero
-        this.album = album
+    set nome(novoNome: string) {
+        this._nome = novoNome;
+    }
+    set genero(novoGenero: string) {
+        if (novoGenero.length < 2) {
+            throw new Error("Genero Invalido.");
+        } else {
+            this._genero = novoGenero;
+        }
+    }
+    set album(novoAlbum: string) {
+        this._album = novoAlbum;
     }
 }
+

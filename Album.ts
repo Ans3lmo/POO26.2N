@@ -1,18 +1,27 @@
 
 export class Album {
 
-    nome: string = "";
-    genero: string = "";
-    faixas: Number = 0;
-    minutos: Number = 0;
+    constructor(
+        private _nome: string,
+        private _genero: string,
+        private _faixas: Number,
+        private _minutos: Number,
+        private _playlist: Number
+    ) { }
 
 
-    constructor(nome: string, genero: string, faixas: Number, minutos: Number) {
 
-        this.nome = nome
-        this.genero = genero
-        this.faixas = faixas
-        this.minutos = minutos
+    set nome(novoNome: string) {
+        this._nome = novoNome;
     }
+    set genero(novoGenero: string) {
+        if (novoGenero.length < 2) {
+            throw new Error("Genero Invalido.");
+        } else {
+            this._genero = novoGenero;
+        }
+    }
+    
 }
+
 
