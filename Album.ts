@@ -9,8 +9,6 @@ export class Album {
         private _playlist: Number
     ) { }
 
-
-
     set nome(novoNome: string) {
         this._nome = novoNome;
     }

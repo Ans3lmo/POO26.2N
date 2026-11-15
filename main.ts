@@ -11,10 +11,10 @@ teclado("pressione alguma tecla para continuar...") // para fazer um menu no ter
 
 
 while (true) {
-    console.log("1- Artistas");
-    console.log("2. Generos");
-    console.log("3. Albums");
-    console.log("4. Alterar Biblioteca");
+    console.log("1- Times");
+    console.log("2. Jogadores");
+    console.log("3. Tabela");
+    console.log("4. ");
 
     let escolha = +teclado("Escolha uma opção: ")
 
@@ -26,3 +26,4 @@ switch (escolha) {
             break;
     }
 }
+
