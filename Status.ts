@@ -6,14 +6,16 @@ export class Status {
         private _overall: number,
     ) { }
 
-    set nome(peDominante: string) {
-        this._peDominante = peDominante;
+    set peDominante(novoPe: string) {
+        this._peDominante = novoPe;
     }
-    set cidade(altura: number) {
-        this._altura = altura;
+
+    set altura(novaAltura: number) {
+        this._altura = novaAltura;
     }
-    set overall(overall: number) {
-        this._overall = overall;
+
+    set overall(novoOverall: number) {
+        this._overall = novoOverall;
     }
 
 }

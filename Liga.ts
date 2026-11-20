@@ -1,8 +1,10 @@
-import { Clubes } from "./Clubes.ts";
+import { Clube } from "./Clubes.ts";
+
 export class Liga {
 
     constructor(
-        public _Clubes: Clubes,
-    
+        private _nome: string,
+        private _clubes: Clube[],
     ) { }
+
 }
