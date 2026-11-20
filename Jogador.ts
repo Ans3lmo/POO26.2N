@@ -1,21 +1,15 @@
-import { Jogador } from "./Jogador.ts";
-import { Status } from "./Status.ts";
 import { Posicoes } from "./Posicoes.ts";
+import { Atributos } from "./Atributos.ts";
+import { Clube } from "./Clubes.ts";
 
 export class Jogador {
 
     constructor(
         private _nome: string,
         private _idade: number,
-        private _Posicoes: Posicoes,
-        private _Clube: string,
+        private _posicao: Posicoes,
+        private _atributos: Atributos,
+        private _clube: string,
     ) { }
 
-    set nome(clubeNome: string) {
-        this._nome = novoNome;
-    }
-    set cidade(clubeCidade: string) {
-        this._cidade = clubeCidade;
-    }
-    
 }
