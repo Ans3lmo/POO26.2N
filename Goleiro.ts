@@ -1,10 +1,4 @@
-import { Faixas } from "./Faixas.ts";
-import { Playlist } from "./Playlist.ts";
+export class Goleiro {
 
-export class Minutos {
-    constructor(
-        private _tempo: number,
-    
-    ) { }
+
 }
-
