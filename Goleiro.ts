@@ -1,26 +1,19 @@
-<<<<<<< HEAD
-export class Goleiro {
-
-
-=======
-import { Jogador } from "./Jogador.ts";
-import { Posicoes } from "./Posicoes.ts";
 import { Atributos } from "./Atributos.ts";
-import { Status } from "./Status.ts";
-import { Clube } from "./Clubes.ts";
+import { Jogador } from "./Jogador.ts";
 
 export class Goleiro extends Jogador {
+    private _agilidade: number;
+    private _reflexo: number;
 
-    constructor(
-        nome: string,
-        idade: number,
-        posicao: Posicoes,
-        atributos: Atributos,
-        status: Status,
-        clube: Clube,
-    ) {
-        super(nome, idade, posicao, atributos, status, clube);
+    constructor(nome: string, clube: string) {
+     super(nome, "goleiro", clube)              // HERDANDO ATRIBUTOS DA SUPERCLASSE
+     this._agilidade = Atributos.randomizar(50, 100);
+     this._reflexo = Atributos.randomizar(60, 100);
+     this._ataque = Atributos.randomizar(5, 30);
+     this._defesa = Atributos.randomizar(60, 100);
     }
 
->>>>>>> 60a18014fd590ce640b798ec1301a955e5925247
+    get agilidade(): number { return this._agilidade; } //GETTERS PARA TER ACESSO FORA DA CLASSE MESMO PRIVADO
+    get reflexo(): number { return this._reflexo; }
 }
+

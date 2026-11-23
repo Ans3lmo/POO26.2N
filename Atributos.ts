@@ -1,22 +1,6 @@
-
 export class Atributos {
 
-    constructor(
-        private _peDominante: string,
-        private _altura: number,
-        private _overall: number,
-    ) { }
-
-    set peDominante(novoPe: string) {
-        this._peDominante = novoPe;
-    }
-
-    set altura(novaAltura: number) {
-        this._altura = novaAltura;
-    }
-
-    set overall(novoOverall: number) {
-        this._overall = novoOverall;
-    }
-
+  public static randomizar(inicio: number, fim: number): number {
+    return Math.floor(Math.random() * (fim - inicio + 1)) + inicio;
+  }
 }
