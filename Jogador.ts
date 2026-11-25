@@ -1,5 +1,5 @@
 import { Atributos } from "./Atributos.ts";
-export class Jogador {
+export abstract class Jogador {
 
         protected _nome: string;
         protected _posicao: string;          // PROTECTED PARA MANTER PRIVADA E SER ACESSADA PELAS CLASSES FILHAS
@@ -8,7 +8,7 @@ export class Jogador {
         protected _ataque: number;
         protected _defesa: number;
 
-    constructor(nome: string, posicao: string, clube: string, ) {
+    constructor(nome: string, posicao: string, clube: string) {
         this._nome = nome;
         this._posicao = posicao;
         this._clube = clube;
@@ -24,4 +24,5 @@ export class Jogador {
     get ataque(): number { return this._ataque; } 
     get defesa(): number { return this._defesa; }
 
+    public abstract calcularDesempenho(): number;
 }

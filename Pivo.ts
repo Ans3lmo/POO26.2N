@@ -15,5 +15,13 @@ export class Pivo extends Jogador{
 
     get frieza(): number { return this._frieza; }
     get finalizacao(): number { return this._finalizacao; }
+
+    public calcularDesempenho(): number {
+    return (
+        this._ataque +
+        this._finalizacao +
+        this._frieza
+    ) / 3;
+}
     
 }

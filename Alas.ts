@@ -18,5 +18,15 @@ export class Alas extends Jogador {
     get organizacao(): number { return this._organizacao; }
     get drible(): number { return this._drible; }
     get visao(): number { return this._visao; }
+
+    public calcularDesempenho(): number {
+    return (
+        this._ataque +
+        this._defesa +
+        this._drible +
+        this._visao +
+        this._organizacao
+    ) / 5;
+}
     
 }

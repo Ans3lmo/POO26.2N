@@ -15,4 +15,8 @@ export class Fixo extends Jogador {
 
     get marcacao(): number { return this._marcacao; }
     get cobertura(): number { return this._cobertura }
+
+    public calcularDesempenho(): number {
+    return (this._defesa + this._marcacao + this._cobertura) / 3;
+}
 }
