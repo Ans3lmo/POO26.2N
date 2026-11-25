@@ -6,13 +6,21 @@ import { Fixo } from "./Fixo.ts";
 import { Alas } from "./Alas.ts";
 import { Pivo } from "./Pivo.ts";
 import { criarClubes } from "./DadosClubes.ts";
+import { Partida } from "./Partida.ts";
+import { Liga } from "./Liga.ts";
 
 const clubes = criarClubes(); 
 if (clubes[0]) {
     clubes[0].exibirElenco();
     console.log(clubes[0].validarElenco());
-    console.log(`Força do clube: ${clubes[0].calcularForca().toFixed(2)}`); // teste (executa node main.ts no terminal para verem)
+    console.log(`Força do clube: ${clubes[0].calcularForca().toFixed(2)}`); // teste imprimir gremio
+
 }
+
+const liga = new Liga(clubes);
+
+liga.iniciarLiga(); //simula jogos
+liga.exibirClassificacao();    // teste classificao e stats >  node main.ts
 
 
 const teclado = prompt();
