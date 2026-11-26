@@ -1,4 +1,3 @@
-
 import prompt from "prompt-sync";
 
 import { criarClubes } from "./DadosClubes.ts";
@@ -27,75 +26,73 @@ let sair = false;
 let campeonatoIniciado = false;
 
 while (!sair) {
+  console.log("\n==========|BRASFUTSAL|==========");
+  console.log("|1- Start                      |");
+  console.log("|2- Clubes                     |");
+  console.log("|3- Jogadores                  |");
+  console.log("|4- Tabela                     |");
+  console.log("|0- Sair                       |");
+  console.log("================================");
 
-    console.log("\n==========|BRASFUTSAL|==========");
-    console.log("|1- Start                      |");
-    console.log("|2- Clubes                     |");
-    console.log("|3- Jogadores                  |");
-    console.log("|4- Tabela                     |");
-    console.log("|0- Sair                       |");
-    console.log("================================");
+  const escolha = Number(teclado("Escolha uma opção: "));
 
-    const escolha = Number(teclado("Escolha uma opção: "));
+  switch (escolha) {
+    case 1:
+      console.log("\n============ BRASFUTSAL ============");
+      console.log("Iniciando campeonato...");
+      console.log("Formato: Todos contra todos");
 
-    switch (escolha) {
+      liga.iniciarLiga();
 
-        case 1:
-            console.log("\n============ BRASFUTSAL ============");
-            console.log("Iniciando campeonato...");
-            console.log("Formato: Todos contra todos");
+      campeonatoIniciado = true;
 
-            liga.iniciarLiga();
+      console.log("\nCAMPEONATO ENCERRADO!");
 
-            campeonatoIniciado = true;
+      liga.exibirClassificacao();
 
-            console.log("\nCAMPEONATO ENCERRADO!");
+      break;
 
-            liga.exibirClassificacao();
+    case 2:
+      console.log("\n========== CLUBES CADASTRADOS ==========");
 
-            break;
+      clubes.forEach((clube, indice) => {
+        console.log(`${indice + 1} - ${clube.nome}`);
+      });
 
-        case 2:
-            console.log("\n========== CLUBES CADASTRADOS ==========");
+      console.log("========================================");
 
-            clubes.forEach((clube, indice) => {
-                console.log(`${indice + 1} - ${clube.nome}`);
-            });
+      break;
 
-            console.log("========================================");
+    case 3:
+      console.log("\n========== JOGADORES CADASTRADOS ==========");
 
-            break;
+      clubes.forEach((clube) => {
+        clube.exibirElenco();
+        console.log("----------------------------------------");
+      });
 
-        case 3:
-            console.log("\n========== JOGADORES CADASTRADOS ==========");
+      break;
 
-            clubes.forEach(clube => {
-                clube.exibirElenco();
-                console.log("----------------------------------------");
-            });
+    case 4:
+      if (campeonatoIniciado) {
+        console.log("\n========== ÚLTIMA CLASSIFICAÇÃO ==========");
+        liga.exibirClassificacao();
+      } else {
+        console.log("\nNenhum campeonato foi disputado ainda!");
+      }
 
-            break;
+      break;
 
-        case 4:
-            if (campeonatoIniciado) {
-                console.log("\n========== ÚLTIMA CLASSIFICAÇÃO ==========");
-                liga.exibirClassificacao();
-            } else {
-                console.log("\nNenhum campeonato foi disputado ainda!");
-            }
+    case 0:
+      console.log("\nEncerrando o BRASFUTSAL...");
+      console.log("Obrigado por jogar!");
+      sair = true;
+      break;
 
-            break;
-
-        case 0:
-            console.log("\nEncerrando o BRASFUTSAL...");
-            console.log("Obrigado por jogar!");
-            sair = true;
-            break;
-
-        default:
-            console.log("\nOpção inválida! Escolha novamente.");
-            break;
-    }
+    default:
+      console.log("\nOpção inválida! Escolha novamente.");
+      break;
+  }
 }
 
 console.log("BRASFUTSAL encerrado.");
