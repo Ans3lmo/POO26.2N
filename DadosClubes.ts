@@ -45,12 +45,12 @@ export function criarClubes(): Clubes[] {
     unisenac.adicionarJogador(alaEsquerdoUnisenac);
     unisenac.adicionarJogador(pivoUnisenac);
 
-    const brasil = new Clubes ("Brasil");
-    const goleiroBrasil = new Goleiro("Eduardo Martini", "Brasil");
-    const fixoBrasil = new Fixo("Cirilo", "Brasil");
-    const alaDireitoBrasil = new Alas ("Diogo Oliveira", "Brasil");
-    const alaEsquerdoBrasil = new Alas ("Rafael Forster", "Brasil");
-    const pivoBrasil = new Pivo ("Nena", "Brasil");
+    const brasil = new Clubes ("G.E Brasil");
+    const goleiroBrasil = new Goleiro("Eduardo Martini", "G.E Brasil");
+    const fixoBrasil = new Fixo("Cirilo", "G.E Brasil");
+    const alaDireitoBrasil = new Alas ("Diogo Oliveira", "G.E Brasil");
+    const alaEsquerdoBrasil = new Alas ("Rafael Forster", "G.E Brasil");
+    const pivoBrasil = new Pivo ("Nena", "G.E Brasil");
 
     brasil.adicionarJogador(goleiroBrasil);
     brasil.adicionarJogador(fixoBrasil);

@@ -20,6 +20,8 @@ export class Liga {
     }
 
     public gerarPartidas(): void {
+         this._partidas = [];
+         
     for (let i = 0; i < this._clubes.length; i++) {
         for (let j = i + 1; j < this._clubes.length; j++) {
 

@@ -41,7 +41,7 @@ while (!sair) {
     switch (escolha) {
 
         case 1:
-            console.log("\n========== BRASFUTSAL ==========");
+            console.log("\n============ BRASFUTSAL ============");
             console.log("Iniciando campeonato...");
             console.log("Formato: Todos contra todos");
 

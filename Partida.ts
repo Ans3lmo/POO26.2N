@@ -33,9 +33,9 @@ export class Partida {
   }
  
     public exibirResultado(): void {
-    console.log("\n========== RESULTADO =================");
+    console.log("\n============ RESULTADO =============");
     console.log(`${this._clubeCasa.nome} ${this._golsCasa} x ${this._golsVisitante} ${this._clubeVisitante.nome}`);
-    console.log("======================================");
+    console.log("====================================");
   }
 
 }
